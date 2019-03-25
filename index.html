@@ -50,27 +50,25 @@ if (navigator.userAgent.match(/Opera Mini/i)) { mobileyes=1; }
 if (navigator.userAgent.match(/IEMobile/i)) { mobileyes=1; }
 if (mobileyes==1) { mobileunderadd='<br><br><i class=\'midtextc\'>(mobile version)</i>'; document.getElementById('xtoma').className='middleamobile'; document.getElementById('footeramobilex').className='footeramobile'; mobileleftadd='mobile'; mobilefootadd="<p style='position: absolute; left: 31.3%; top: 213%;'>&nbsp;</p>"; } }
 
-function xcommentsback() { if (mobileyes==0) {
+var xfileout=''; var rfilex=new XMLHttpRequest(); rfilex.open('GET', 'clist', false); rfilex.onreadystatechange=function() { if (rfilex.readyState===4) { if(rfilex.status===200 || rfilex.status==0) { xfileout=rfilex.responseText; } } }; rfilex.send(null);
+
 //---backcomments---
 var winxinw=window.innerWidth;
 var winxinh=window.innerHeight;
 var backboxaw=220;
 var backboxah=45;
 
-var xfileout=''; var rfilex=new XMLHttpRequest(); rfilex.open('GET', 'clist', false); rfilex.onreadystatechange=function() { if (rfilex.readyState===4) { if(rfilex.status===200 || rfilex.status==0) { xfileout=rfilex.responseText; } } }; rfilex.send(null);
-
 function getcommenta() { couttext=ctextbreaka[Math.floor((Math.random()*(ctextbreaka.length-1)))]; couttexta=couttext.split("\n"); return { 0:couttexta[0], 1:couttexta[1]}; }
 
 function drawbackboxa() { backboxbh=Math.floor((Math.random()*5)+20); backboxout='';
 while (backboxbh<(winxinh-backboxah-50)) { backboxbwx=backboxaw; backboxbw=Math.floor((Math.random()*(backboxbwx/2))+10);
-while (backboxbw<(winxinw-(backboxbwx+50))) { outcommenta=getcommenta()[0].replace(/</g, '&lt;'); outcommentb=getcommenta()[1].replace(/</g, '&lt;'); document.getElementById('backboxwcheck').innerHTML='<b>'+String(outcommenta)+'</b><br>'+String(outcommentb); backboxrealw=document.getElementById('backboxwcheck').offsetWidth;
+while (backboxbw<(winxinw-(backboxbwx+50))) { outcommenta=String(getcommenta()[0]).replace(/</g, '&lt;'); outcommentb=String(getcommenta()[1]).replace(/</g, '&lt;'); document.getElementById('backboxwcheck').innerHTML='<b>'+String(outcommenta)+'</b><br>'+String(outcommentb); backboxrealw=document.getElementById('backboxwcheck').offsetWidth;
 if (backboxbw<(winxinw-(backboxrealw+10))) { if (backboxbw<(document.getElementsByClassName('box')[0].getClientRects()[0].left-backboxrealw) || backboxbw>(document.getElementsByClassName('box')[0].getClientRects()[0].left+document.getElementsByClassName('box')[0].getClientRects()[0].width) || backboxbh<(document.getElementsByClassName('box')[0].getClientRects()[0].top-backboxah) || backboxbh>(document.getElementsByClassName('box')[0].getClientRects()[0].top+document.getElementsByClassName('box')[0].getClientRects()[0].height)) { if (outcommenta.length>1) { backboxout+='<div style=\'position: fixed; left: '+String(backboxbw)+'px; top: '+String(backboxbh)+'px; height: '+String(backboxah)+'px;\' class=\'backcommenta\'>'+document.getElementById('backboxwcheck').innerHTML+'<div>'; } } }
 backboxbw+=(backboxrealw+Math.floor((Math.random()*(parseInt(backboxaw/2)))+10)); } backboxbh+=(backboxah+(Math.floor((Math.random()*backboxah)+10))); }
 document.getElementById('backboxida').innerHTML=backboxout; }
 
-waitclist=setInterval("if (xfileout.length>0) { ctextbreaka=String(xfileout).split(\"\\n\\n\"); drawbackboxa(); clearInterval(waitclist); }", 10);
+function xcommentsback() { if (mobileyes==0) { waitclist=setInterval("if (xfileout.length>0) { ctextbreaka=String(xfileout).split(\"\\n\\n\"); drawbackboxa(); clearInterval(waitclist); }", 10); } }
 //------------------
-} }
 
 middleactive=0; var sboxyes=0; animend=0; var xwriteia=0; xwriteib=0; var xwritetxta='- Nadja Cox -'; var xwritetxtb='& xhamster &';
 function xwritea() { if (xwriteia<xwritetxta.length) { document.getElementById('middletitlex').innerHTML+=xwritetxta.charAt(xwriteia); xwriteia++; setTimeout(xwritea, 35); } else { xwriteb(); } }
