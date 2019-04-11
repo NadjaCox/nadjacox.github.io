@@ -43,7 +43,7 @@ li { color: #FFCDFF; }
 box-shadow: inset 0 0 30px #fff, inset 20px 0 30px #fff, inset -20px 0 30px #fff, inset 20px 0 30px #fff, inset -20px 0 30px #f0f, 0 0 20px #fff, -10px 0 30px #f0f, 10px 0 30px #f0f; }
 </style>
 
-<script>var mobileleftadd=''; var mobileunderadd=''; var mobilefootadd=''; var mobileyes=0; function checkmobilea() { if (navigator.userAgent.match(/Android/i)) { mobileyes=1; }
+<script>var firstautoshowyes=1; var mobileleftadd=''; var mobileunderadd=''; var mobilefootadd=''; var mobileyes=0; function checkmobilea() { if (navigator.userAgent.match(/Android/i)) { mobileyes=1; }
 if (navigator.userAgent.match(/BlackBerry/i)) { mobileyes=1; }
 if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) { mobileyes=1; }
 if (navigator.userAgent.match(/Opera Mini/i)) { mobileyes=1; }
@@ -80,10 +80,11 @@ var lefttopbtext='<center style=\'margin-left: 20px; margin-right: 20px;\'><big>
 var lefttopctext='<center style=\'margin-left: 20px; margin-right: 20px;\'><br><img src=\'toya.png\' height=\'70%\' style=\'float: left; margin-right: 10px; border: inset; border-width: 1px; border-radius: 5px 25%; opacity: 0.8;\'><big><u>Toys:</u></big> I have some toys like dildo, vibrator, plug, spank paddle, mouth gag, nipple clamp, handcuff, chastity cage, long rope...<br><br>If you want to see something special with such toys then just let me know. Maybe I have the toy that you should see me ready. So, i love such games ;)';
 var lefttopdtext='<center style=\'margin-left: 20px; margin-right: 20px;\'><big><u>ToDo-List:</u></big> I have some things at the moment I want to do in my videos. some are your ideas, others are mine. maybe yours is already there...?<br><br><li>Make a video in which I cum to my face and mouth (self face cum).</li><br><br><li>Make a video in which I push my deep throat skills to the limit.</li><br><br><li>Make a video in which i\'m styled as gothic girl.</li>';
 function showsidebox() { if (sboxyes==0) { if (mobileyes==0) { document.getElementById('backboxida').style.opacity=0; } document.getElementById('sideboxshow').innerHTML="<div class='lefttope"+mobileleftadd+"'></div><div class='lefttopf"+mobileleftadd+"'></div><div class='lefttopg"+mobileleftadd+"'></div><div class='lefttoph"+mobileleftadd+"'></div><div class='lefttopa"+mobileleftadd+"'><font class='sideboxtext"+mobileleftadd+"'>"+lefttopatext+"</font></div><div class='lefttopb"+mobileleftadd+"'><font class='sideboxtext"+mobileleftadd+"'>"+lefttopbtext+"</font></div><div class='lefttopc"+mobileleftadd+"'><font class='sideboxtext"+mobileleftadd+"'>"+lefttopctext+"</font></div><div class='lefttopd"+mobileleftadd+"'><font class='sideboxtext"+mobileleftadd+"'>"+lefttopdtext+"</font></div>"+mobilefootadd; boxalphaup(); } else { if (mobileyes==0) { document.getElementById('backboxida').style.opacity=0.25; } boxalphadown(); } }
+function firstautoshow() { if (animend==0) { animend=1; if (middleactive==0) { middleactive=1; document.getElementById('middleballclick').style.opacity=1; showsidebox(); sboxyes=1; } } }
 </script></head>
 
-<body class='bodya' onload='checkmobilea(); xcommentsback(); xwritea()'><div id='backboxida' class='backboxall'></div><div style='position: fixed; left: 1000; top: -1000px; opacity: 0; z-index: 0' id='backboxwcheck'></div>
-<center class='middlea' id='xtoma'><div class='box' onclick='if (animend==0) { animend=1; if (middleactive==0) { middleactive=1; style.opacity=1; showsidebox(); sboxyes=1; } else { middleactive=0; style.opacity=0.8; showsidebox(); sboxyes=0; } }' onmouseover='style.opacity=1' onmouseout='if (middleactive==0) { style.opacity=0.8; }'>
+<body class='bodya' onload='checkmobilea(); xcommentsback(); xwritea(); if(firstautoshowyes==1) { setTimeout("firstautoshow()", 3500); }'><div id='backboxida' class='backboxall'></div><div style='position: fixed; left: 1000; top: -1000px; opacity: 0; z-index: 0' id='backboxwcheck'></div>
+<center class='middlea' id='xtoma'><div class='box' id='middleballclick' onclick='if (animend==0) { animend=1; if (middleactive==0) { middleactive=1; style.opacity=1; showsidebox(); sboxyes=1; } else { middleactive=0; style.opacity=0.8; showsidebox(); sboxyes=0; } }' onmouseover='style.opacity=1' onmouseout='if (middleactive==0) { style.opacity=0.8; }'>
 <div class='wave -one'></div><div class='wave -two'></div><div class='wave -three'></div>
 <div class='middletitlea'><font class='midtexta' id='middletitlex'></font><br><br><font class='midtextb' id='middleunderx'></font></div></div></center>
 <b><p id='sideboxshow' style='opacity: 0'></p></b>
