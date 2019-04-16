@@ -83,7 +83,7 @@ function showsidebox() { if (sboxyes==0) { if (mobileyes==0) { document.getEleme
 function firstautoshow() { if (animend==0 && allfirstshow==0) { animend=1; if (middleactive==0) { middleactive=1; document.getElementById('middleballclick').style.opacity=1; showsidebox(); sboxyes=1; } } }
 </script></head>
 
-<body class='bodya' onload='checkmobilea(); xcommentsback(); xwritea(); if(firstautoshowyes==1) { setTimeout("firstautoshow()", 3500); }'><div id='backboxida' class='backboxall'></div><div style='position: fixed; left: 1000; top: -1000px; opacity: 0; z-index: 0' id='backboxwcheck'></div>
+<body class='bodya' onload='checkmobilea(); xcommentsback(); xwritea(); if(firstautoshowyes==1) { if if (mobileyes==0) { setTimeout("firstautoshow()", 3500); } else { setTimeout("firstautoshow()", 1); } }'><div id='backboxida' class='backboxall'></div><div style='position: fixed; left: 1000; top: -1000px; opacity: 0; z-index: 0' id='backboxwcheck'></div>
 <center class='middlea' id='xtoma'><div class='box' id='middleballclick' onclick='allfirstshow=1; if (animend==0) { animend=1; if (middleactive==0) { middleactive=1; style.opacity=1; showsidebox(); sboxyes=1; } else { middleactive=0; style.opacity=0.8; showsidebox(); sboxyes=0; } }' onmouseover='style.opacity=1' onmouseout='if (middleactive==0) { style.opacity=0.8; }'>
 <div class='wave -one'></div><div class='wave -two'></div><div class='wave -three'></div>
 <div class='middletitlea'><font class='midtexta' id='middletitlex'></font><br><br><font class='midtextb' id='middleunderx'></font></div></div></center>
