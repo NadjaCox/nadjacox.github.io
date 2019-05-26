@@ -50,7 +50,7 @@ if (navigator.userAgent.match(/Opera Mini/i)) { mobileyes=1; }
 if (navigator.userAgent.match(/IEMobile/i)) { mobileyes=1; }
 if (mobileyes==1) { mobileunderadd='<br><br><i class=\'midtextc\'>(mobile version)</i>'; document.getElementById('xtoma').className='middleamobile'; document.getElementById('footeramobilex').className='footeramobile'; mobileleftadd='mobile'; mobilefootadd="<p style='position: absolute; left: 31.3%; top: 213%;'>&nbsp;</p>"; } }
 
-var xfileout=''; var rfilex=new XMLHttpRequest(); rfilex.open('GET', 'clist', false); rfilex.onreadystatechange=function() { if (rfilex.readyState===4) { if(rfilex.status===200 || rfilex.status==0) { xfileout=rfilex.responseText; } } }; rfilex.send(null);
+var xfileout=''; var rfilex=new XMLHttpRequest(); rfilex.open('GET', 'clist', true); rfilex.onreadystatechange=function() { if (rfilex.readyState===4) { if(rfilex.status===200 || rfilex.status==0) { xfileout=rfilex.responseText; } } }; rfilex.send(null);
 
 //---backcomments---
 var winxinw=window.innerWidth;
