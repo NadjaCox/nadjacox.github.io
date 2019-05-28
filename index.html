@@ -67,7 +67,7 @@ if (backboxbw<(winxinw-(backboxrealw+10))) { if (backboxbw<(document.getElements
 backboxbw+=(backboxrealw+Math.floor((Math.random()*(parseInt(backboxaw/2)))+10)); } backboxbh+=(backboxah+(Math.floor((Math.random()*backboxah)+10))); }
 document.getElementById('backboxida').innerHTML=backboxout; }
 
-function xcommentsback() { if (mobileyes==0) { var waitclist=setInterval("if (xfileout.length>0) { ctextbreaka=String(xfileout).split(\"\\n\\n\"); drawbackboxa(); clearInterval(waitclist); }", 10); } }
+function xcommentsback() { if (mobileyes==0) { waitclist=setTimeout("if (xfileout.length>0) { ctextbreaka=String(xfileout).split(\"\\n\\n\"); drawbackboxa(); }", 10); } }
 //------------------
 
 middleactive=0; var sboxyes=0; animend=0; var xwriteia=0; xwriteib=0; var xwritetxta='- Nadja Cox -'; var xwritetxtb='& xhamster &';
